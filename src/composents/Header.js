@@ -1,9 +1,7 @@
 import Marvel from "../img/Marvel.jpg";
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { fa} from "@fortawesome/free-brand-svg-icons";
 
-const Header = ({ comics, setComics }) => {
+const Header = ({ token, comics, setComics }) => {
   const handSummit = (event) => {
     event.preventDefault();
   };
@@ -26,12 +24,19 @@ const Header = ({ comics, setComics }) => {
           <div className="link-header"> Personnages</div>
         </Link>
         <Link className="link-header" to="/Allcomics">
-          <div className="link-header">
-            {/* <FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon> */}
-            Comics
-          </div>
+          <div className="link-header">Comics</div>
         </Link>
-        <div className="link-header"> Favorites</div>
+        {token === null ? (
+          <div style={{ opacity: 0.5 }} className="link-header">
+            {" "}
+            Favoris
+          </div>
+        ) : (
+          <Link className="link-header" to="/Favoris">
+            {" "}
+            <div className="link-header">Favoris</div>
+          </Link>
+        )}
       </div>
     </div>
   );

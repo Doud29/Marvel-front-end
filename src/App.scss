@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Saira+Condensed:wght@100;200;400;500;600&display=swap");
 
 //-----------------------------------------------------------------//
+//------------------------// connexion //--------------------------//
+//-----------------------------------------------------------------//
+
+.connexion-app {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-end;
+  .bouton-connexion {
+    width: 200px;
+    color: red;
+  }
+}
+
+//-----------------------------------------------------------------//
 //------------------------// Header //-----------------------------//
 //-----------------------------------------------------------------//
 
@@ -39,9 +54,9 @@
     justify-content: space-evenly;
     margin-right: 15px;
     background-color: black;
-    color: white;
+    color: red;
     .link-header {
-      color: white;
+      color: red;
       text-decoration: none;
     }
     .link-header:hover {
@@ -57,19 +72,130 @@
 .home-app {
   width: 100%;
   height: auto;
-  border: 3px solid pink;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  background-color: black; /* Used if the image is unavailable */
+
+  .fiche-avengers:hover {
+    opacity: 0.9;
+  }
   .fiche-avengers {
     margin: auto;
     display: flex;
     flex-direction: column;
-    height: 380px;
-    width: auto;
+    height: auto;
+    width: 350px;
     overflow: hidden;
     margin: auto;
-    // margin-top: 20px;
-    // margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-start-end-radius: 15px;
+    color: white;
+
+    .name-avengers {
+      color: black;
+      font-weight: 600;
+      height: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      font-size: 35px;
+      background-color: white;
+    }
+    .photo-avengers {
+      height: auto;
+      object-fit: contain;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .Bouton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+    .bouton {
+      width: 20%;
+      background-color: black;
+      border: 1px solid red;
+      color: red;
+      margin-left: 15px;
+      margin-right: 15px;
+      border-radius: 5px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.bd-app {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black; /* Used if the image is unavailable */
+
+  .bd-description {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 25%;
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    overflow: hidden;
+    margin: auto;
+    color: white;
+    .bd-title {
+      color: red;
+      margin-bottom: 10px;
+    }
+    .bd-intitule {
+      color: red;
+      margin-top: 10px;
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+    .bd-image img {
+      margin-top: 10px;
+      border-start-end-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border: 2px solid red;
+    }
+  }
+  .Bouton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+    .bouton {
+      width: 20%;
+      background-color: black;
+      border: 1px solid red;
+      color: red;
+      margin-left: 15px;
+      margin-right: 15px;
+      border-radius: 5px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -80,17 +206,131 @@
 .comics-app {
   width: 100%;
   height: auto;
-  border: 3px solid pink;
   display: flex;
   flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: black; /* Used if the image is unavailable */
+  .Bouton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+    .bouton {
+      width: 20%;
+      background-color: black;
+      border: 1px solid red;
+      color: red;
+      margin-left: 15px;
+      margin-right: 15px;
+      border-radius: 5px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
-  .comics-description {
-    border: 2px solid black;
-    width: 25%;
+  .Bloc-presentation {
+    width: 80%;
     margin: auto;
-    height: 380px;
+    margin-top: 30px;
+
+    .name-hero {
+      width: 30%;
+      background-color: white;
+      border-start-end-radius: 15px;
+      border-bottom-left-radius: 15px;
+      padding: 15px;
+      height: auto;
+      color: black;
+      margin-bottom: 15px;
+    }
+
+    .description-hero {
+      width: 100%;
+      background-color: white;
+      margin: auto;
+      margin-bottom: 30px;
+      border-start-end-radius: 15px;
+      border-bottom-left-radius: 15px;
+      padding: 15px;
+      height: auto;
+      color: black;
+    }
+  }
+  .carroussel {
+    height: auto;
+    width: 100%;
+    display: flex;
     overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    overflow-x: scroll;
+
+    .comics-description {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-start-end-radius: 15px;
+      height: auto;
+      flex-direction: column;
+      width: 260px;
+      margin: auto;
+      margin-top: 20px;
+      margin-right: 25px;
+      margin-left: 25px;
+      .comics-title {
+        color: black;
+        width: 100%;
+        font-weight: 600;
+        border-start-end-radius: 15px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(225, 25, 25);
+      }
+      .comics-image img {
+        width: 260px;
+      }
+      .comics-intitule {
+        background-color: white;
+        font-size: 12px;
+        height: auto;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        border-bottom-left-radius: 15px;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------//
+//------------------------// Singup //-----------------------------//
+//-----------------------------------------------------------------//
+
+.signup-app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-image: url("./img/thanos2.jpg"); /* The image used */
+  background-color: black; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
+  background-size: cover;
+  h1 {
+    color: red;
+    font-size: 60px;
+  }
+  input {
+    height: 40px;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid black;
   }
 }

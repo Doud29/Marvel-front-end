@@ -22,10 +22,10 @@ const Login = ({ setUser }) => {
         alert(
           "vous devez créer un compte car votre mail ou votre password n'est pas valide"
         );
-        // navigate("/Signup");
+        navigate("/Signup");
       } else {
         setUser(response.data.token);
-        // navigate("/");
+        navigate("/");
       }
     } catch (error) {
       console.log(error.message);
